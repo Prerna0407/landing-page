@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo">adidas</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Category</a>
+            <a href="#">Product</a>
+            <a href="#">Blogs</a>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="content">
+        <h3>new adidas shoes</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum assumenda hic doloremque ratione accusantium consectetur totam est dolores voluptatibus aliquam!</p>
+        <a href="#" class="btn"> add to cart</a>
+    </div>
+
+    <div class="image">
+        <img src="images/Adidas-Running-Shoes-Transparent-Background-PNG.png" alt="" class="shoes active">
+        <img src="images/vxmij9zqxnrpfqsrmjp5.webp" alt="" class="shoes">
+        <img src="images/adidas-adizero-Adios-6-370x250.png" alt="" class="shoes">
+    </div>
+
+    <div class="left" onclick=" prev()"> < </div>
+    <div class="right"  onclick="next()"> > </div>
+    </section>
+
+    <section>
+        <footer class="footer">
+            <div class="icons">
+               <a href="https://github.com/Prerna0407"><i class="fab fa-github"></i></a>
+               <a href="https://www.linkedin.com/in/prerna-ingale-9b05a61a7"><i class="fab fa-linkedin"></i></a>
+               <a href="https://codepen.io/Prerna4"><i class="fab fa-codepen"></i></a>
+               <a href="https://www.facebook.com/prerna.ingale.58"><i class="fab fa-facebook"></i></a>
+                <p class="company-name">
+                    Prerna ingale &copy; 2021, ALL Rights Reserved
+                </p>
+            </div>
+        </footer>
+    </section>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <script>
+        let shoes = document.querySelectorAll('.shoes');
+        let index = 0;
+        
+        function next(){
+            shoes[index].classList.remove('active');
+            index = (index + 1) % shoes.length;
+            shoes[index].classList.add('active')
+        }
+
+        function prev(){
+            shoes[index].classList.remove('active');
+            index = (index - 1 + shoes.length) % shoes.length;
+            shoes[index].classList.add('active')
+        }
+    </script>
+</body>
+</html>

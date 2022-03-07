@@ -1,0 +1,159 @@
+*{
+
+    font-family: 'Nunito',sans-serif;
+    margin: 0; padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+header{
+    position: fixed;
+    z-index: 1000;
+    top: 0%; left: 0%; right:0;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+header .logo{
+    font-size: 25px;
+    color: white;
+}
+header .navbar a{
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+} 
+header .navbar a:hover{
+    font-size: 20px;
+    color: rgb(187, 122, 122);
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 9%;
+    position: relative;
+    overflow: hidden;
+}
+.container .content{
+    flex: 1 1 400px;
+}
+.container .image{
+    flex: 1 1 500px;
+    position: relative;
+}
+.container .image .shoes{
+  width: 100%;
+  transform: rotate(5deg);
+  display: none;
+}
+.container .image .active{
+    display: initial;
+    animation: animate .5s cubic-bezier(.45,1.63,.98,1.55);
+  }
+  @keyframes animate{
+      0%{
+          transform: rotate(0deg) scale(.7);
+      }
+  }
+.container .image::before{
+   content: '';
+    position: absolute;
+    top: 50px; left: 100px;
+    border-radius: 50%;
+    height: 450px;
+    width: 450px;
+    background: #eee;
+}
+.container .content h3{
+   color: black;
+   font-size: 50px;
+}
+.container .content p{
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px 0;
+ }
+ .container .content .btn{
+     display: inline-block;
+     margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 9px 40px;
+    background-color: #333;
+ }
+ .container .content .btn:hover{
+   color: white;
+   background-color: #666;
+}
+.container .left ,
+.container .right{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  border: 2px solid #333;
+  color: #333;
+  line-height: 45px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.container .left{
+    left:30px;
+}
+.container .right{
+    right: 30px;
+}
+.container .left:hover ,
+.container .right:hover{
+    background-color:#333 ;
+    color: white;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.icons{
+    padding-top: 1rem;
+}
+
+.icons a{
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0.5rem;
+    color: #f4f4f4;
+}
+
+.company-name{
+    font-size: 17px;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+    html{
+    font-size: 50%;
+    }
+} 
